@@ -25,6 +25,7 @@ import com.test.banner.bean.DataBean;
 import com.test.banner.viewholder.ImageHolder;
 import com.youth.banner.adapter.BannerAdapter;
 import com.youth.banner.util.BannerUtils;
+import com.youth.banner.util.BannerUtilsKt;
 
 import java.util.List;
 

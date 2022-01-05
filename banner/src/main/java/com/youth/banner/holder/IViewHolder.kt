@@ -1,15 +1,14 @@
-package com.youth.banner.holder;
+package com.youth.banner.holder
 
-import android.view.ViewGroup;
+import android.view.ViewGroup
 
-public interface IViewHolder<T, VH> {
-
+interface IViewHolder<T, VH> {
     /**
      * 创建ViewHolder
      *
      * @return XViewHolder
      */
-    VH onCreateHolder(ViewGroup parent, int viewType);
+    fun onCreateHolder(parent: ViewGroup, viewType: Int): VH
 
     /**
      * 绑定布局数据
@@ -19,6 +18,5 @@ public interface IViewHolder<T, VH> {
      * @param position 当前位置
      * @param size     总数
      */
-    void onBindView(VH holder, T data, int position, int size);
-
+    fun onBindView(holder: VH, data: T, position: Int, size: Int)
 }

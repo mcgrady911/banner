@@ -40,7 +40,7 @@ public class NumIndicator extends BaseIndicator {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int count = config.getIndicatorSize();
+        int count = indicatorConfig.getIndicatorSize();
         if (count <= 1) {
             return;
         }
@@ -50,7 +50,7 @@ public class NumIndicator extends BaseIndicator {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int count = config.getIndicatorSize();
+        int count = indicatorConfig.getIndicatorSize();
         if (count <= 1) {
             return;
         }
@@ -59,7 +59,7 @@ public class NumIndicator extends BaseIndicator {
         mPaint.setColor(Color.parseColor("#70000000"));
         canvas.drawRoundRect(rectF, radius, radius, mPaint);
 
-        String text = config.getCurrentPosition() + 1 + "/" + count;
+        String text = indicatorConfig.getCurrentPosition() + 1 + "/" + count;
         mPaint.setColor(Color.WHITE);
         canvas.drawText(text, width / 2, (float) (height * 0.7), mPaint);
 
