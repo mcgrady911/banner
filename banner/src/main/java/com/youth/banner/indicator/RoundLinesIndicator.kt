@@ -13,7 +13,7 @@ class RoundLinesIndicator @JvmOverloads constructor(
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         val count = indicatorConfig.indicatorSize
         if (count <= 1) return
-        setMeasuredDimension((indicatorConfig.selectedWidth * count) as Int, indicatorConfig.height)
+        setMeasuredDimension((indicatorConfig.selectedWidth * count), indicatorConfig.height)
     }
 
     override fun onDraw(canvas: Canvas) {

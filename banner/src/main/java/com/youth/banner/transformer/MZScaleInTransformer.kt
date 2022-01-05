@@ -23,7 +23,7 @@ class MZScaleInTransformer : BasePageTransformer {
         val width = viewPager.measuredWidth.toFloat()
         val offsetPosition = paddingLeft / (width - paddingLeft - paddingRight)
         val currentPos = position - offsetPosition
-        var reduceX = 0f
+        var reduceX: Float
         val itemWidth = view.width.toFloat()
         //由于左右边的缩小而减小的x的大小的一半
         reduceX = (1.0f - mMinScale) * itemWidth / 2.0f

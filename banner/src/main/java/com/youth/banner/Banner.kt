@@ -1,37 +1,34 @@
 package com.youth.banner
 
 import android.content.Context
-import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-import android.os.Build
-import androidx.recyclerview.widget.RecyclerView
-import androidx.lifecycle.LifecycleOwner
-import com.youth.banner.config.BannerConfig
-import androidx.annotation.ColorInt
-import androidx.annotation.IntDef
-import com.youth.banner.config.IndicatorConfig
-import com.youth.banner.listener.OnBannerListener
-import com.youth.banner.adapter.BannerAdapter
-import com.youth.banner.indicator.Indicator
-import android.widget.FrameLayout
 import android.graphics.*
-import android.view.ViewConfiguration
+import android.os.Build
 import android.util.AttributeSet
 import android.view.MotionEvent
+import android.view.ViewConfiguration
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
+import androidx.annotation.IntDef
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.AdapterDataObserver
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
-import com.youth.banner.transformer.ScaleInTransformer
-import com.youth.banner.transformer.MZScaleInTransformer
-import androidx.annotation.ColorRes
-import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.youth.banner.adapter.BannerAdapter
+import com.youth.banner.config.BannerConfig
+import com.youth.banner.config.IndicatorConfig
+import com.youth.banner.indicator.Indicator
+import com.youth.banner.listener.OnBannerListener
 import com.youth.banner.listener.OnPageChangeListener
+import com.youth.banner.transformer.MZScaleInTransformer
+import com.youth.banner.transformer.ScaleInTransformer
 import com.youth.banner.util.*
-import java.lang.NullPointerException
-import java.lang.annotation.Retention
-import java.lang.annotation.RetentionPolicy
 import java.lang.ref.WeakReference
 
 class Banner<T, BA : BannerAdapter<T, out RecyclerView.ViewHolder?>?> @JvmOverloads constructor(
@@ -111,7 +108,7 @@ class Banner<T, BA : BannerAdapter<T, out RecyclerView.ViewHolder?>?> @JvmOverlo
     private lateinit var mRoundPaint: Paint
     private lateinit var mImagePaint: Paint
 
-    @Retention(RetentionPolicy.SOURCE)
+    @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(HORIZONTAL, VERTICAL)
     annotation class Orientation
 
